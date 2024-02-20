@@ -86,6 +86,7 @@ describe('ticketListReducer', () => {
         id: id
       }
     });
+    console.log(newState2)
   });
 
   test('Should successfully update only issue property of existing ticket data in masterTicketList', () => {
@@ -140,6 +141,7 @@ describe('ticketListReducer', () => {
       formattedWaitTime: '4 minutes',
       id: id
     };
+    
     expect(ticketListReducer({ [id] : ticketData }, action)).toEqual({
       [id] : {
         names: names,
